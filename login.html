@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In - Gragnily</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to the SAME style.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Simple Placeholder Logo Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Re-using the same outer container structure -->
+    <div class="signup-page"> <!-- You can keep this class name or rename to auth-page -->
+        <div class="logo-container">
+             <!-- Same Logo Placeholder -->
+            <div class="logo-icon">
+                 <i class="fas fa-book-open"></i> <!-- Example icon -->
+            </div>
+            <h1 class="site-name">Gragnily</h1>
+        </div>
+
+        <!-- Renamed container class slightly for semantic clarity, but styling can be shared -->
+        <div class="login-container">
+            <h2>Welcome Back!</h2>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+
+                <div class="forgot-password-link">
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <!-- Re-using the same button class for consistent styling -->
+                <button type="submit" class="btn-signup">Log In</button>
+            </form>
+
+            <!-- Link to the sign-up page -->
+            <p class="signup-link">
+                Don't have an account? <a href="#">Sign Up</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
