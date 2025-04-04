@@ -1,0 +1,163 @@
+/* --- Variables based on the image's aesthetic --- */
+:root {
+    --bg-color: #F5F1EA;         /* Very light beige page background */
+    --container-bg: #EAE3D9;   /* Slightly darker beige for containers/inputs */
+    --primary-accent: #F78F2E;   /* Bright orange (like the logo bg) */
+    --secondary-accent: #E8946E; /* Muted orange/coral button (like 'ნახვა') */
+    --text-color: #4A443F;       /* Dark grey/brown text */
+    --placeholder-color: #a09a94; /* Lighter text for placeholders */
+    --white: #FFFFFF;
+    --border-radius-large: 25px; /* Generous rounding for containers */
+    --border-radius-medium: 15px;/* Rounding for inputs/buttons */
+    --font-family: 'Poppins', sans-serif; /* Rounded sans-serif */
+}
+
+/* --- Basic Reset & Body Styling --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.signup-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 450px; /* Limit width of the signup area */
+}
+
+/* --- Logo Area --- */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px; /* Space between logo and form */
+}
+
+.logo-icon {
+    background-color: var(--primary-accent);
+    color: var(--white);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem; /* Adjust icon size */
+    margin-right: 15px;
+}
+
+.site-name {
+    font-size: 2.8rem; /* Large site name */
+    font-weight: 700; /* Bold */
+    color: var(--text-color);
+}
+
+
+/* --- Signup Container Styling --- */
+.signup-container {
+    background-color: var(--container-bg);
+    padding: 35px 40px; /* Generous padding */
+    border-radius: var(--border-radius-large); /* Very rounded corners */
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    text-align: center;
+}
+
+.signup-container h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+/* --- Form Elements Styling --- */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Align labels left */
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1px solid transparent; /* No harsh border initially */
+    background-color: var(--bg-color); /* Use main bg for input contrast */
+    border-radius: var(--border-radius-medium); /* Rounded inputs */
+    font-size: 1rem;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: var(--placeholder-color);
+    font-weight: 400;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--secondary-accent); /* Highlight border on focus */
+    box-shadow: 0 0 0 3px rgba(232, 148, 110, 0.2); /* Soft glow matching button */
+}
+
+/* --- Button Styling --- */
+.btn-signup {
+    background-color: var(--secondary-accent);
+    color: var(--white);
+    border: none;
+    padding: 14px 25px;
+    border-radius: var(--border-radius-medium); /* Consistent rounding */
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    cursor: pointer;
+    width: 100%; /* Full width button */
+    margin-top: 10px; /* Space above button */
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn-signup:hover {
+    background-color: #d9825a; /* Slightly darker orange on hover */
+}
+
+.btn-signup:active {
+    transform: scale(0.98); /* Slight shrink on click */
+}
+
+/* --- Login Link --- */
+.login-link {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.login-link a {
+    color: var(--primary-accent); /* Use the brighter orange for the link */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
