@@ -30,15 +30,16 @@ body {
     padding: 20px;
 }
 
-.signup-page {
+/* Shared outer container */
+.signup-page { /* Or rename to .auth-page if preferred */
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 450px; /* Limit width of the signup area */
+    max-width: 450px; /* Limit width of the auth area */
 }
 
-/* --- Logo Area --- */
+/* --- Logo Area (Identical) --- */
 .logo-container {
     display: flex;
     align-items: center;
@@ -65,8 +66,10 @@ body {
 }
 
 
-/* --- Signup Container Styling --- */
-.signup-container {
+/* --- Auth Container Styling (Shared for Signup & Login) --- */
+/* Apply common styles to both .signup-container and .login-container */
+.signup-container,
+.login-container {
     background-color: var(--container-bg);
     padding: 35px 40px; /* Generous padding */
     border-radius: var(--border-radius-large); /* Very rounded corners */
@@ -75,14 +78,16 @@ body {
     text-align: center;
 }
 
-.signup-container h2 {
+/* Specific headings if needed, or use a common selector */
+.signup-container h2,
+.login-container h2 {
     font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 30px;
     color: var(--text-color);
 }
 
-/* --- Form Elements Styling --- */
+/* --- Form Elements Styling (Identical) --- */
 .form-group {
     margin-bottom: 20px;
     text-align: left; /* Align labels left */
@@ -121,8 +126,28 @@ body {
     box-shadow: 0 0 0 3px rgba(232, 148, 110, 0.2); /* Soft glow matching button */
 }
 
-/* --- Button Styling --- */
-.btn-signup {
+/* --- Forgot Password Link Specific Style --- */
+.forgot-password-link {
+    text-align: right; /* Align to the right */
+    margin-bottom: 20px; /* Space before the login button */
+    margin-top: -10px; /* Pull slightly closer to password field */
+}
+
+.forgot-password-link a {
+    color: var(--text-color); /* Subtler color than main links */
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.forgot-password-link a:hover {
+    color: var(--primary-accent); /* Use bright orange on hover */
+    text-decoration: underline;
+}
+
+
+/* --- Button Styling (Identical - using .btn-signup class) --- */
+.btn-signup { /* Reusing the signup button style */
     background-color: var(--secondary-accent);
     color: var(--white);
     border: none;
@@ -133,7 +158,7 @@ body {
     font-family: var(--font-family);
     cursor: pointer;
     width: 100%; /* Full width button */
-    margin-top: 10px; /* Space above button */
+    margin-top: 10px; /* Reduced top margin as forgot pwd link adds space */
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
@@ -145,19 +170,22 @@ body {
     transform: scale(0.98); /* Slight shrink on click */
 }
 
-/* --- Login Link --- */
-.login-link {
+/* --- Bottom Links (Login/Signup Toggle) --- */
+.login-link,  /* Style for the link on the Sign Up page */
+.signup-link { /* Style for the link on the Log In page */
     margin-top: 25px;
     font-size: 0.9rem;
     color: var(--text-color);
 }
 
-.login-link a {
+.login-link a,
+.signup-link a {
     color: var(--primary-accent); /* Use the brighter orange for the link */
     text-decoration: none;
     font-weight: 600;
 }
 
-.login-link a:hover {
+.login-link a:hover,
+.signup-link a:hover {
     text-decoration: underline;
 }
